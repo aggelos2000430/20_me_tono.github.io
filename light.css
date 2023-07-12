@@ -1,0 +1,257 @@
+body {
+  font-family: 'Playfair Display', serif;
+  position: relative;
+}
+
+header {
+  background-color: rgba(211, 211, 211, 0.5);
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #d3d3d3;
+  color: #222;
+}
+
+button {
+  background-color: rgba(211, 211, 211, 0.5);
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.button-gray {
+  background-color: rgba(211, 211, 211, 0.5);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+button:hover {
+  background-color: rgba(211, 211, 211, 0.9);
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+nav button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+nav button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+form input[type="submit"] {
+  display: block;
+  width: 100px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: rgba(211, 211, 211, 0.5);
+  color: black;
+  padding: 20px;
+  text-align: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.accordion2:hover {
+  background-color: #ccc;
+}
+
+.menu-container {
+  position: relative;
+}
+
+#menu-btn {
+  display: block;
+  background-color: transparent;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 10%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.6s;
+}
+
+#menu-btn.active + #menu-content {
+  display: block;
+}
+
+#menu-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px); /* add 10px to create some space between the button and the menu */
+  left: -440px; /* adjust the value to control the distance from the button */
+  background-color: #f9f9f9;
+  box-shadow: -8px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 12px;
+  min-width: 120px;
+  white-space: nowrap; /* prevent line breaks */
+}
+
+
+.menu-bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #333;
+  transition: all 0.6s ease;
+}
+
+#menu-content a {
+  display: block;
+  padding: 8px 0;
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .menu-container {
+    margin-top: 40px;
+  }
+
+  #menu-btn {
+    width: auto;
+  }
+
+  #menu-content {
+      left: -60px; /* adjust the value to control the distance from the left edge */
+      top: calc(100% + 10px); /* add 10px to create some space between the button and the menu */
+      min-width: auto;
+      width: 100%;
+    }
+}
+
+.photo-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.photo-frame main {
+    max-width: 100%
+}
+
+.photo-frame img {
+  max-width: 70%;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px 0px #ccc;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: rgba(211, 211, 211, 0.5);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: rgba(211, 211, 211, 0.9);
+}
